@@ -1,0 +1,910 @@
+                                    -----Hospital-Job-Citys-Thailand-2
+repeat
+	wait()
+until game:IsLoaded()
+if game.PlaceId== 4503309821 then
+
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/win444/gui/main/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2gui"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/win444/gui/main/Nofitication"))()
+
+-- Intro
+Notification:Notify(
+    {Title = "Loading", Description = "Please Wait"},
+    {OutlineColor = Color3.fromRGB(76, 0, 130),Time = 5, Type = "default"}
+)
+
+--loadstring(game:HttpGet("https://pastebin.com/raw/4RxNLy1x",true))()
+
+wait(5)
+
+-- Ui Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/wino444/win/refs/heads/main/ui"))()
+
+-- Window
+local Window = Library.CreateLib("win X | HUB ", "Serpent")
+
+-- Toggle
+local Toggle = Instance.new("ScreenGui")
+local UIToggle = Instance.new("TextButton")
+
+Toggle.Name = "Toggle"
+Toggle.Parent = game.CoreGui
+
+UIToggle.Name = "UIToggle"
+UIToggle.Parent = Toggle
+UIToggle.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+UIToggle.BackgroundTransparency = 0.660
+UIToggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+UIToggle.Size = UDim2.new(0.0650164187, 0, 0.0888099447, 0)
+UIToggle.Font = Enum.Font.SourceSans
+UIToggle.Text = "Toggle"
+UIToggle.TextColor3 = Color3.fromRGB(75, 0, 130)
+UIToggle.TextSize = 24.000
+UIToggle.Draggable = true
+UIToggle.Active = true
+UIToggle.TextXAlignment = Enum.TextXAlignment.Left
+UIToggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+-- Notification library
+ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/win444/gui-/main/%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99"))();
+ local Notify = Notification.Notify;
+
+-- Tabs
+local Welcome = Window:NewTab("Welcome")
+local We = Welcome:NewSection("Hello, "..game.Players.LocalPlayer.Name)
+
+local Main = Window:NewTab("Main")
+local ch = Main:NewSection("Main Options")
+local Ma = Main:NewSection("Main Options")
+
+local Teleports = Window:NewTab("สถานที่")
+local Te = Teleports:NewSection("วาป")
+
+local MoneySystem = Window:NewTab("เงิน")
+local Money = MoneySystem:NewSection("ระบบเงิน")
+
+local Rocket = Window:NewTab("จรวด")
+local Ro = Rocket:NewSection("เกี่ยวกับจรวด")
+
+local When = Window:NewTab("แกล้งคน")
+local Wh = When:NewSection("FE")
+
+local box = Window:NewTab("prat")
+local bo = box:NewSection("เกี่ยวกับชิ้นส่วนไม่ได้ยึด")
+
+local ScriptFE = Window:NewTab("FE")
+local FE = ScriptFE:NewSection("คนอื่นเห็น")
+
+local More = Window:NewTab("เพิ่มเติม")
+local more = More:NewSection("คนสร้างใช้")
+
+--local Tab1Sec = Window:NewTab("Main")
+--local Tab1Section = Tab1Sec:NewSection("Main Options")
+
+                                           --function
+local function debugPrintChildren(parent)
+    local maxChildren = 10  -- Number of children to print
+    local children = parent:GetChildren()
+    print("Children of", parent.Name, ":")
+    for i, child in ipairs(children) do
+        if i > maxChildren then break end
+        print(i, child.Name)
+    end
+end
+
+local function clickAllDetectors()
+    local index = 470  -- Adjust index as needed
+    local parentFolder = workspace:GetChildren()[index]
+    
+    if parentFolder then
+        print("Checking parent folder:", parentFolder.Name)
+        local pillsFolder = parentFolder:FindFirstChild("PillsFolder")
+        
+        if pillsFolder then
+            print("PillsFolder found.")
+            local colors = {"Blue", "White", "Yellow"}
+
+            for _, color in ipairs(colors) do
+                local colorFolder = pillsFolder:FindFirstChild(color)
+                
+                if colorFolder then
+                    print(color .. " folder found. Checking for ClickDetectors...")
+                    for _, v in pairs(colorFolder:GetDescendants()) do
+                        if v:IsA("ClickDetector") then
+                            -- Ensure fireclickdetector is defined
+                            fireclickdetector(v)
+                        end
+                    end
+                else
+                    warn(color .. " folder not found in PillsFolder.")
+                end
+            end
+        else
+            warn("PillsFolder not found in the specified parent folder.")
+        end
+    else
+        warn("Parent folder not found in workspace.")
+    end
+end
+
+-- Tab
+local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
+
+We:NewButton("Player : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.UserId, "?", function()
+print("hi")
+end)
+
+We:NewButton("Game : "..game.PlaceId.." | "..PlaceName.Name, "?", function()
+print("hi")
+end)
+
+We:NewButton("Account Age : "..game.Players.LocalPlayer.AccountAge.." | Premium : Yes", "?", function()
+print("hi")
+end)
+
+We:NewKeybind("Ui Toggle (Key-Bind)", "?", Enum.KeyCode.F, function()
+    Library:ToggleUI()
+end)
+
+-- Tab1
+ch:NewSlider("Walkspeed", "SliderInfo", 120, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = s     
+end)
+
+ch:NewSlider("JumpPower", "SliderInfo", 300, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+-- ตัวแปรเปิด/ปิด NoCooldown
+local NoCooldown = false
+
+-- สร้างตาราง hooks เพื่อเก็บ event hooks
+local hooks = {}
+
+-- ค้นหา ProximityPrompt และจัดการ Event
+for _, object in pairs(workspace:GetDescendants()) do
+    if object:IsA("ProximityPrompt") then
+        -- บันทึกฟังก์ชันเดิมไว้
+        local originalAction = object.Triggered:Connect(function(player)
+            if NoCooldown then
+                print("ProximityPrompt Triggered by: ", player.Name)
+                object.HoldDuration = 0 -- ทำให้กดแล้วติดทันที
+            else
+                object.HoldDuration = 1 -- ค่าเริ่มต้น (หรือเปลี่ยนเป็นค่าตามเดิมของเกม)
+            end
+        end)
+
+        -- ใส่ event เข้าไปในรายการ hooks
+        table.insert(hooks, originalAction)
+    end
+end
+
+-- ปุ่มเปิด/ปิด NoCooldown
+ch:NewToggle("ไม่คูลดาวน์ (ProximityPrompt)", "?", function(win)
+    NoCooldown = win
+    print("NoCooldown: " .. tostring(NoCooldown))
+end)
+
+
+
+
+
+
+Ma:NewButton("เกาะ", '?', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-113.26754760742188, 47.92503356933594, -4.570798397064209)
+end)
+
+Ma:NewButton("ลอบบี้", "?", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-278, 179.4999542236328, 343)
+end)
+
+Ma:NewToggle("Infinite Jumps", "?", function(state)
+    local InfiniteJumpEnabled = state
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+        end
+    end)
+end)
+
+Ma:NewButton("Fly GUI", "not made by us", function()
+    --ARCEUS X FLY V2 SCRIPT BY me_ozoneYT
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+Ma:NewButton("GUI ลอย", '?', function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+end)
+
+Ma:NewToggle("Godmode", '?', function(Value)
+    _G.spam = Value 
+while _G.spam do wait() 
+	             game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	       end
+end)
+
+Ma:NewButton("Script MyWorld", "??", function()    
+       loadstring(game:HttpGet(('https://pastefy.app/Oic24KzG/raw'),true))()
+end) 
+
+Ma:NewButton("clicktp", "??", function()    
+          mouse = game.Players.LocalPlayer:GetMouse()
+ tool = Instance.new("Tool")
+ tool.RequiresHandle = false
+ tool.Name = "Click TP"
+ tool.Activated:connect(function()
+ local pos = mouse.Hit+Vector3.new(0,2.5,0)
+ pos = CFrame.new(pos.X,pos.Y,pos.Z)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+ end)
+ tool.Parent = game.Players.LocalPlayer.Backpack
+ wait(0.07)
+ local TweenService = game:GetService("TweenService")
+ local UserInputService = game:GetService("UserInputService")
+ local Players = game:GetService("Players")
+ 
+ local tool = Instance.new("Tool")
+ tool.RequiresHandle = false
+ tool.Name = "Tween Click TP"
+ local function onActivated()
+	 local mouse = Players.LocalPlayer:GetMouse()
+	 local pos = mouse.Hit + Vector3.new(0,2.5,0)
+	 local humanoidRootPart = Players.LocalPlayer.Character.HumanoidRootPart
+ 
+	 local tweenInfo = TweenInfo.new(
+		 1,
+		 Enum.EasingStyle.Quad,
+		 Enum.EasingDirection.Out,
+		 0,
+		 false,
+		 0
+	 )
+ 
+	 local tween = TweenService:Create(humanoidRootPart, tweenInfo, {
+		 CFrame = CFrame.new(pos.X, pos.Y, pos.Z)
+	 })
+ 
+	 tween:Play()
+ end
+ 
+ tool.Activated:Connect(onActivated)
+ tool.Parent = Players.LocalPlayer.Backpack
+					 end)
+
+Te:NewButton("จุดเกิด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70.08087158203125, 177.2809600830078, 306.34375)
+end)    
+
+Te:NewButton("ร้านชื้อของ", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20.928678512573242, 177.74801635742188, 219.13272094726562)
+end) 
+
+Te:NewButton("หลังตู้ATM", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.436490058898926, 177.74803161621094, 213.44219970703125)
+end) 
+
+Te:NewButton("โรงพยาบาล", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.70863342285156, 178.57505798339844, 214.75289916992188)--โรงพยาบาล
+end) 
+
+Te:NewButton("ฐานปล่อยจรวด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.0702209472656, 176.9749298095703, 219.04412841796875)--ที่ปล่อยจรวด
+end) 
+
+Te:NewButton("โรงเรียน", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-100.95848846435547, 164.52853393554688, 135.37594604492188)
+end)
+
+Te:NewButton("ห้องใต้ดิน", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.35214233398438, 140.42848205566406, 162.5637969970703)
+end)
+
+Te:NewButton("จุดขายปืน", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-232.77244567871094, 202.8300323486328, -133.4486541748047)
+end)
+
+Te:NewButton("สถานีตำรวจ", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(175.17926025390625, 177.53814697265625, 247.49310302734375)--สถานีตำรวจ
+end) 
+
+Te:NewButton("จุดชื้อบ้าน1", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250.9174346923828, 167.49777221679688, 103.77043914794922)--จุดชื้อบ้าน1
+end) 
+
+Te:NewButton("วัด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(446.1864929199219, 173.77708435058594, -42.36382293701172)
+end) 
+
+Te:NewButton("ร้านชื้อรถ", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(384.1832580566406, 171.00828552246094, -209.54486083984375)
+end) 
+
+-- ตารางสำหรับเก็บจำนวนเงินและรอบ
+local moneyRounds = {
+    [100] = 1,       -- 100 เงิน = 1 รอบ
+    [1000] = 10,     -- 1000 เงิน = 10 รอบ
+    [10000] = 100,   -- 10000 เงิน = 100 รอบ
+    [100000] = 1000, -- 100000 เงิน = 1000 รอบ
+    [1000000] = 10000, -- 1000000 เงิน = 10000 รอบ
+    [10000000] = 100000 -- 10000000 เงิน = 100000 รอบ
+}
+
+local selectedAmount = nil -- ตัวแปรสำหรับเก็บจำนวนเงินที่เลือก
+
+-- ตารางสำหรับตัวเลือกใน Dropdown ที่เป็นคำแบบไทย
+local dropdownOptions = {
+    ["1ร้อยบาท"] = 100,
+    ["1พันบาท"] = 1000,
+    ["1หมื่นบาท"] = 10000,
+    ["1แสนบาท"] = 100000,
+    ["1ล้านบาท"] = 1000000,
+    ["10ล้านบาท"] = 10000000
+}
+
+-- Dropdown สำหรับเลือกจำนวนเงินแบบคำภาษาไทย
+Money:NewDropdown("เลือกจำนวนเงิน", "DropdownInf", {"1ร้อยบาท", "1พันบาท", "1หมื่นบาท", "1แสนบาท", "1ล้านบาท", "10ล้านบาท"}, function(currentOption)
+    selectedAmount = dropdownOptions[currentOption] -- แปลงตัวเลือกภาษาไทยเป็นจำนวนเงิน
+end)
+
+-- ฟังก์ชันเพื่อยิงรีโมท
+local function fireRemote(roundsToFire)
+    local args = {
+        [1] = "Sell"
+    }
+
+    for i = 1, roundsToFire do
+        game:GetService("ReplicatedStorage").House:FireServer(unpack(args))
+    end
+
+    print("ยิงรีโมทไปทั้งหมด " .. roundsToFire .. " รอบ สำหรับเงิน " .. selectedAmount .. " บาท")
+end
+
+-- ปุ่มสำหรับยิงรีโมท
+Money:NewButton("กดยิง", "ยิงรีโมทตามจำนวนเงินที่เลือก", function()
+    if selectedAmount then
+        local rounds = moneyRounds[selectedAmount] -- ค้นหารอบจากตาราง
+
+        if rounds then
+            fireRemote(rounds) -- ยิงรีโมทตามจำนวนรอบ
+        else
+            warn("ไม่สามารถค้นหาเงินที่เลือกได้!")
+        end
+    else
+        warn("กรุณาเลือกจำนวนเงินก่อน!")
+    end
+end)
+
+
+-- ตัวแปรชื่อผู้เล่นสำหรับส่งเงิน
+_G.moneyPlayerName = ""
+_G.amount = 0
+_G.autoSend = false
+
+-- กล่องข้อความสำหรับชื่อผู้เล่นในฟังก์ชันส่งเงิน
+Money:NewTextBox("ชื่อผู้เล่นสำหรับส่งเงิน", "", function(playerName)
+    if playerName and playerName ~= "" then
+        _G.moneyPlayerName = playerName
+        print("ชื่อผู้เล่นสำหรับส่งเงินถูกตั้งค่าเป็น:", _G.moneyPlayerName)
+    else
+        print("กรุณากรอกชื่อผู้เล่นสำหรับส่งเงิน")
+    end
+end)
+
+-- กล่องข้อความสำหรับจำนวนเงิน
+Money:NewTextBox("จำนวนเงิน", "ใส่จำนวนเงิน", function(amount)
+    local numAmount = tonumber(amount)
+    if numAmount and numAmount > 0 then
+        _G.amount = numAmount
+        print("จำนวนเงินถูกตั้งค่าเป็น:", _G.amount)
+    else
+        print("กรุณากรอกจำนวนเงินที่ถูกต้อง")
+    end
+end)
+
+-- ฟังก์ชันส่งเงินอัตโนมัติ
+Money:NewToggle("ส่งเงินออโต้(ทุก1วิ)", '?', function(isEnabled)
+    _G.autoSend = isEnabled
+    while _G.autoSend do
+        wait(1)
+        if _G.moneyPlayerName ~= "" and _G.amount > 0 then
+            local args = {
+                [1] = _G.moneyPlayerName, -- ชื่อผู้เล่นที่ถูกกำหนดไว้สำหรับส่งเงิน
+                [2] = _G.amount -- จำนวนเงิน
+            }
+            game:GetService("ReplicatedStorage").DonateEvent:FireServer(unpack(args))
+        end
+    end
+end)
+
+-- ปุ่มสำหรับส่งเงินครั้งเดียว
+Money:NewButton("กดส่งรอบเดียว", "ส่งรอบเดียว", function()
+    if _G.moneyPlayerName ~= "" and _G.amount > 0 then
+        local args = {
+            [1] = _G.moneyPlayerName, -- ชื่อผู้เล่นที่ถูกกำหนดไว้สำหรับส่งเงิน
+            [2] = _G.amount -- จำนวนเงิน
+        }
+        game:GetService("ReplicatedStorage").DonateEvent:FireServer(unpack(args))
+    else
+        print("กรุณากรอกชื่อผู้เล่นและจำนวนเงินให้ครบถ้วน")
+    end
+end)
+
+Money:NewButton("1แสน กดรอบเดียว(ต้องอยู่ใกล้)", "??", function()    
+for i=1, 1000 do
+fireproximityprompt(workspace.ATMModel.Model.Part.ProximityPrompt, 1, true)
+end
+end)
+
+Money:NewButton("1แสน กดรอบเดียว(ขาย)", "??", function()    
+local args = {
+    [1] = "Sell"
+}
+
+for i = 1, 1000000 do
+game:GetService("ReplicatedStorage").House:FireServer(unpack(args))
+end
+end)
+
+
+
+
+Money:NewToggle("ออโต้ ปล้น(ต้องอยู่ใกล้)", '?', function(Value)
+    _G.boom = Value 
+while _G.boom do wait()
+       fireproximityprompt(workspace.ATMModel.Model.Part.ProximityPrompt, 1, true)
+       end
+end)
+
+
+
+Money:NewToggle("ออโต้ กดรับเงิน", '?', function(Value)
+_G.boom = Value 
+while _G.boom do wait()
+game:GetService'VirtualUser':CaptureController()
+game:GetService'VirtualUser':Button1Down(Vector2.new(393, 184))
+end    
+end)
+
+Money:NewButton("ปล้น ไม่คูลดาวน์(ต้องอยู่ใกล้)", "??", function()    
+fireproximityprompt(workspace.ATMModel.Model.Part.ProximityPrompt, 1, true)
+end)
+
+Money:NewToggle("ออโต้ฟาร์มเงิน(ได้น้อย)", "?", function(Value)
+    _G.auto = Value
+    while _G.auto do
+        wait(1) -- Added delay to prevent rapid execution
+
+        local planeFolder = workspace:FindFirstChild("PlaneFolder")
+        
+        if planeFolder then
+            for _, v in pairs(planeFolder:GetDescendants()) do
+                if v:IsA("TouchTransmitter") then
+                    -- Ensure firetouchinterest is defined
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) -- 0 is touch
+                    wait(0.1) -- Short delay to avoid rapid firing
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+                end
+            end
+        else
+            warn("PlaneFolder not found in workspace.")
+        end
+    end
+end)
+
+
+-- Hook into the toggle
+Money:NewToggle("ออโต้ฟาร์มเงิน(โรงพยาบาล)", '?', function(value)
+    _G.boom = value
+    while _G.boom do
+        wait(1) -- Adding a delay to avoid rapid firing and reduce server load
+        clickAllDetectors()
+    end
+end)
+
+Money:NewToggle("ออโต้ปล้นเงิน(อันเดียว)(ห้องใต้ดินโรงเรียน)", '?', function(Value)
+_G.boom = Value 
+while _G.boom do wait()
+fireproximityprompt(workspace.Safe.Door.ProximityPrompt, 1, true)
+end    
+end)
+
+
+Money:NewToggle("ถือMoney Bagออโต้", '?', function(Value)
+_G.boom = Value 
+while _G.boom do wait()
+tool = "Money Bag" 
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(tool))
+game:GetService'VirtualUser':CaptureController()
+game:GetService'VirtualUser':Button1Down(Vector2.new(393, 184))
+end    
+end)
+
+Money:NewButton("รับของทั้งหมด(ที่เจอได้)", "??", function()    
+local ccamount = 0
+ 
+	 for i,v in pairs(game:GetDescendants()) do
+		 if v:IsA("ClickDetector") then
+				ccamount = ccamount + 1
+			 fireclickdetector(v)
+		 end
+	 end
+
+ wait();
+ 
+ Notify({
+ Description = "Fired " .. ccamount .. " amount of click detectors";
+ Title = "Nameless Admin";
+ Duration = 7;
+ 
+ });
+ end)
+
+Money:NewButton("ซื้อปืน", "??", function()
+    -- Define the index of the child in the workspace
+    local index = 428
+
+    -- Get the child from workspace using the index
+    local targetChild = workspace:GetChildren()[index]
+
+    if targetChild then
+        -- Attempt to get the "Head" and "ClickDetector" from the target child
+        local head = targetChild:FindFirstChild("Head")
+        if head then
+            local clickDetector = head:FindFirstChildOfClass("ClickDetector")
+            if clickDetector then
+                -- Ensure fireclickdetector is defined
+                fireclickdetector(clickDetector)
+                print("ClickDetector fired successfully.")
+            else
+                warn("ClickDetector not found in Head.")
+            end
+        else
+            warn("Head not found in the target child.")
+        end
+    else
+        warn("Target child not found in workspace at index " .. index)
+    end
+end)
+
+
+Money:NewButton("??", "??", function()    
+       
+end)
+
+
+
+
+
+Ro:NewButton("ปุ่มปล่อยจรวด", "??", function()    
+       fireclickdetector(workspace["Rocket Ship"].Rocket.Trigger.ClickDetector)--ปลอยจรวด
+end) 
+
+Ro:NewButton("ฐานปล่อยจรวด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.0702209472656, 176.9749298095703, 219.04412841796875)--ที่ปล่อยจรวด
+end) 
+
+Ro:NewButton("ข้างในจรวด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-354.61431884765625, 263.8428955078125, 231.1928253173828)--ข้างในจรวด
+end) 
+
+Wh:NewButton("แป้นพิม", "?", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)   
+
+Wh:NewButton("เน็ตพาส", "?", function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/xgrbDn4D"))()
+end)
+
+Wh:NewButton("หลุมดำ", "?", function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/yxD0jJvM"))()
+end)
+
+Wh:NewButton("แมพภัยพิบัติ", "?", function()
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Natural%20Disaster'))()
+end)
+
+Wh:NewButton("GUI ดึงบล็อก(ใช้เน็ตพาสก่อน)", "?", function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/bjQXjyqh",true))()
+end)
+
+Wh:NewButton("แอดมิน", "ใช้ได้บางแมพ", function()    
+       loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/5aed2fbe731daca594361da9a4944e70/raw/60b8bae3946abf15682c9e324d1fefb6a31cb81d/fix",true))()
+end)    
+
+Wh:NewButton("หยิบบล็อก", "ใช้ได้บางแมพ", function()    
+       loadstring(game:HttpGet(('https://pastefy.app/BbXuvVkK/raw'),true))()
+end)    
+
+
+
+
+
+
+
+bo:NewButton("unanchorednogravity", "ทำให้ชิ้นส่วนที่ไม่มีการยึดติดมีแรงโน้มถ่วง 0", function()
+wait();
+	 
+	 Notify({
+	 Description = "ชิ้นส่วนที่ทำโดยไม่ยึดติดจะไม่มีแรงโน้มถ่วง";
+	 Title = "win hub";
+	 Duration = 5;
+	 
+ });
+spawn(function()
+	 while true do
+		 game.Players.LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)*math.huge
+		 game.Players.LocalPlayer.SimulationRadius = math.pow(math.huge,math.huge)*math.huge
+		 game:GetService("RunService").Stepped:wait()
+	 end
+ end)
+ local function zeroGrav(part)
+	 if part:FindFirstChild("BodyForce") then return end
+	 local temp = Instance.new("BodyForce")
+	 temp.Force = part:GetMass() * Vector3.new(0,workspace.Gravity,0)
+	 temp.Parent = part
+ end
+ 
+ for i,v in ipairs(workspace:GetDescendants()) do
+	 if v:IsA("Part") and v.Anchored == false then
+		 if not (v:IsDescendantOf(game.Players.LocalPlayer.Character)) then
+			 zeroGrav(v)
+		 end
+	 end
+ end
+ 
+ workspace.DescendantAdded:Connect(function(part)
+	 if part:IsA("Part") and part.Anchored == false then
+		 if not (part:IsDescendantOf(game.Players.LocalPlayer.Character)) then
+			 zeroGrav(part)
+		 end
+	 end
+ end)
+ end)
+
+bo:NewButton("freezeua", "หยุดทุกส่วนที่ไม่ได้ยึดบนแผนที่", function()
+
+frozenParts = {}
+		 if sethidden then
+				 local badnames = {
+					 "Head",
+					 "UpperTorso",
+					 "LowerTorso",
+					 "RightUpperArm",
+					 "LeftUpperArm",
+					 "RightLowerArm",
+					 "LeftLowerArm",
+					 "RightHand",
+					 "LeftHand",
+					 "RightUpperLeg",
+					 "LeftUpperLeg",
+					 "RightLowerLeg",
+					 "LeftLowerLeg",
+					 "RightFoot",
+					 "LeftFoot",
+					 "Torso",
+					 "Right Arm",
+					 "Left Arm",
+					 "Right Leg",
+					 "Left Leg",
+					 "HumanoidRootPart"
+				 }
+				 local function FREEZENOOB(v)
+					 if v:IsA("BasePart" or "UnionOperation") and v.Anchored == false then
+						 local BADD = false
+						 for i = 1,#badnames do
+							 if v.Name == badnames[i] then
+								 BADD = true
+							 end
+						 end
+						 if game.Players.LocalPlayer.Character and v:IsDescendantOf(game.Players.LocalPlayer.Character) then
+							 BADD = true
+						 end
+						 if BADD == false then
+							 for i,c in pairs(v:GetChildren()) do
+								 if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+									 c:Destroy()
+								 end
+							 end
+							 local bodypos = Instance.new("BodyPosition")
+							 bodypos.Parent = v
+							 bodypos.Position = v.Position
+							 bodypos.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+							 local bodygyro = Instance.new("BodyGyro")
+							 bodygyro.Parent = v
+							 bodygyro.CFrame = v.CFrame
+							 bodygyro.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+							 if not table.find(frozenParts,v) then
+								 table.insert(frozenParts,v)
+							 end
+						 end
+					 end
+				 end
+				 for i,v in pairs(workspace:GetDescendants()) do
+					 FREEZENOOB(v)
+				 end
+				 freezingua = workspace.DescendantAdded:Connect(FREEZENOOB)
+				 end
+wait();
+	 
+	 Notify({
+	 Description = "freezeua ทำงาน";
+	 Title = "win hub";
+	 Duration = 5;
+	 
+ });				
+		 end)       
+
+bo:NewButton("unfreezeua", "ยกเลิกการตรึงทุกส่วนที่ไม่ได้ยึดบนแผนที่", function()
+wait();
+	 
+	 Notify({
+	 Description = "Unfroze unanchored parts ทำงาน";
+	 Title = "win hub";
+	 Duration = 5;
+	 
+ });
+if sethidden then
+				 if freezingua then
+					 freezingua:Disconnect()
+				 end
+				 for i,v in pairs(frozenParts) do
+					 for i,c in pairs(v:GetChildren()) do
+						 if c:IsA("BodyPosition") or c:IsA("BodyGyro") then
+							 c:Destroy()
+						 end
+					 end
+				 end
+				 frozenParts = {}
+				 end				
+		 end)       
+
+
+
+
+
+
+
+
+ 
+FE:NewButton("FE chat art", "ทำงานแชท ค่าเริ่มต้น", function()    
+       loadstring(game:HttpGet("https://pastebin.com/raw/PfZAT5Mz",true))()
+end) 
+
+-- UI Creation using OrionLib
+FE:NewButton("ส่องแชทส่วนตัว", "??", function()
+    local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
+    local Window = OrionLib:MakeWindow({Name = "win Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+    local Tab = Window:MakeTab({
+        Name = "Main",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+    local Section = Tab:AddSection({
+        Name = "Chat Log's"
+    })
+
+    OrionLib:MakeNotification({
+        Name = "From Anir",
+        Content = "U better not leak it!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+
+    -- Chat spying settings
+    local enabled = true
+    local spyOnMyself = true
+    local public = false
+    local publicItalics = true
+    local privateProperties = {
+        Color = Color3.fromRGB(0,255,255), 
+        Font = Enum.Font.SourceSansBold,
+        TextSize = 18,
+    }
+    
+    local StarterGui = game:GetService("StarterGui")
+    local Players = game:GetService("Players")
+    local player = Players.LocalPlayer
+    local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+    local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+    local instance = (_G.chatSpyInstance or 0) + 1
+    _G.chatSpyInstance = instance
+
+    -- Function to handle chat messages
+    local function onChatted(p, msg)
+        if _G.chatSpyInstance == instance then
+            if p == player and msg:lower():sub(1, 4) == "/spy" then
+                enabled = not enabled
+                wait(0.3)
+                privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+                StarterGui:SetCore("ChatMakeSystemMessage", privateProperties)
+            elseif enabled and (spyOnMyself == true or p ~= player) then
+                msg = msg:gsub("[\n\r]", ''):gsub("\t", ' '):gsub("[ ]+", ' ')
+                local hidden = true
+                local conn
+                conn = getmsg.OnClientEvent:Connect(function(packet, channel)
+                    if packet.SpeakerUserId == p.UserId and packet.Message == msg:sub(#msg - #packet.Message + 1) and (channel == "All" or (channel == "Team" and public == false and Players[packet.FromSpeaker].Team == player.Team)) then
+                        hidden = false
+                    end
+                end)
+                wait(1)
+                conn:Disconnect()
+                if hidden and enabled then
+                    if public then
+                        saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg, "All")
+                    else
+                        privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+                        StarterGui:SetCore("ChatMakeSystemMessage", privateProperties)
+                    end
+                end
+            end
+        end
+    end
+
+    -- Connect chat events
+    for _, p in ipairs(Players:GetPlayers()) do
+        p.Chatted:Connect(function(msg) onChatted(p, msg) end)
+    end
+    Players.PlayerAdded:Connect(function(p)
+        p.Chatted:Connect(function(msg) onChatted(p, msg) end)
+    end)
+
+    -- Set initial state
+    privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+    StarterGui:SetCore("ChatMakeSystemMessage", privateProperties)
+
+    -- Ensure chat frame visibility
+    local chatFrame = player.PlayerGui.Chat.Frame
+    chatFrame.ChatChannelParentFrame.Visible = true
+    chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position + UDim2.new(0, 0, 0, chatFrame.ChatChannelParentFrame.Size.Y.Offset)
+end)
+
+
+FE:NewButton("Vfly", "??", function()    
+       loadstring(game:HttpGet("https://pastebin.com/raw/MHE1cbWF"))()
+end) 
+
+FE:NewButton("FE animation", "??", function()    
+loadstring(game:HttpGet("https://pastebin.com/raw/qpkqejhH",true))()
+end) 
+
+FE:NewButton("??", "??", function()    
+       
+end) 
+
+more:NewButton("คำสั่ง", "?", function()
+       loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)   
+
+more:NewButton("คำสั่ง2", "?", function()
+       loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-no-byfron-ui-11288"))()
+end)
+
+more:NewButton("ดูพิกัดวาป", "?", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/NOOBHUBX/Location/main/NOOB%20HUB.Lua"))()
+end)
+
+more:NewButton("ดักรีโมท", "?", function()
+       loadstring(game:HttpGet("https://github.com/exxtremestuffs/SimpleSpySource/raw/master/SimpleSpy.lua"))()
+end)
+
+more:NewButton("หาค่าวาป", "?", function()
+       setclipboard(tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position))
+end)
+
+more:NewButton("dex", "?", function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
+
+more:NewButton("dex (สำหรับมือถือ)(ไร้คี)", "?", function()
+local __function = loadstring(game:HttpGet("https://github.com/Hosvile/DEX-Explorer/releases/latest/download/main.lua", true))
+ 
+__function(__function)       
+end)
+
+--more:NewButton("dex (สำหรับมือถือ)(ต้องการคี)", "?", function()
+      -- loadstring(game:HttpGet("https://github.com/Hosvile/DEX-Explorer/releases/latest/download/main.lua", true))()
+--end)
+
+end
