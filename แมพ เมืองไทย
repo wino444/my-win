@@ -1,12 +1,595 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+                                    -----Hospital-Job-Citys-Thailand-2
+repeat
+	wait()
+until game:IsLoaded()
+if game.PlaceId== 4503309821 then
 
-]]--
+local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/win444/gui/main/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2gui"))()
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/win444/gui/main/Nofitication"))()
 
-local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=math.ldexp;local v9=getfenv or function() return _ENV;end ;local v10=setmetatable;local v11=pcall;local v12=select;local v13=unpack or table.unpack ;local v14=tonumber;local function v15(v16,v17,...) local v18=1;local v19;v16=v4(v3(v16,5),"..",function(v30) if (v1(v30,2)==81) then v19=v0(v3(v30,1,1));return "";else local v83=0;local v84;while true do if (v83==0) then v84=v2(v0(v30,16));if v19 then local v100=v5(v84,v19);v19=nil;return v100;else return v84;end break;end end end end);local function v20(v31,v32,v33) if v33 then local v85=(v31/((5 -3)^(v32-(2 -1))))%((3 -1)^(((v33-(2 -1)) -(v32-1)) + (620 -(555 + 64)))) ;return v85-(v85%1) ;else local v86=0;local v87;while true do if (v86==((1808 -(282 + 595)) -(857 + 74))) then v87=(570 -(367 + 201))^(v32-(928 -((1851 -(1523 + 114)) + 713))) ;return (((v31%(v87 + v87))>=v87) and (1 + 0 + 0)) or (0 + 0) ;end end end end local function v21() local v34=v1(v16,v18,v18);v18=v18 + 1 ;return v34;end local function v22() local v35=(957 -(892 + 65)) -0 ;local v36;local v37;while true do if ((1066 -(68 + 997))==v35) then return (v37 * (1526 -(226 + 1044))) + v36 ;end if (v35==(0 -(0 -0))) then v36,v37=v1(v16,v18,v18 + (119 -(32 + 85)) );v18=v18 + 2 + 0 ;v35=1 + 0 ;end end end local function v23() local v38=0 -0 ;local v39;local v40;local v41;local v42;while true do if (v38==((953 -(802 + 150)) -(0 -0))) then return (v42 * (16777566 -(87 + 263))) + (v41 * ((119206 -53490) -(67 + 113))) + (v40 * (188 + 68)) + v39 ;end if (v38==(0 -0)) then v39,v40,v41,v42=v1(v16,v18,v18 + 3 + 0 );v18=v18 + 4 ;v38=3 -2 ;end end end local function v24() local v43=v23();local v44=v23();local v45=443 -(416 + 26) ;local v46=(v20(v44,1 + 0 ,1017 -(915 + 82) ) * ((3 -1)^(470 -(145 + 293)))) + v43 ;local v47=v20(v44,59 -38 ,19 + 12 );local v48=((v20(v44,41 -9 )==(1188 -(58 + 1011 + 42 + 76))) and  -(1 + (885 -(261 + 624)))) or (2 -1) ;if (v47==(0 -0)) then if (v46==(0 + 0)) then return v48 * (0 + 0) ;else v47=(4 -1) -(1082 -(1020 + 60)) ;v45=0 -0 ;end elseif (v47==(3636 -1589)) then return ((v46==(0 + 0)) and (v48 * ((792 -(368 + 423))/(0 -0)))) or (v48 * NaN) ;end return v8(v48,v47-(1041 -(10 + 8)) ) * (v45 + (v46/(2^((1622 -(630 + 793)) -147)))) ;end local function v25(v49) local v50;if  not v49 then local v88=0 + 0 ;while true do if ((0 -0)==v88) then v49=v23();if (v49==(0 -0)) then return "";end break;end end end v50=v3(v16,v18,(v18 + v49) -(1748 -(760 + 987)) );v18=v18 + v49 ;local v51={};for v66=1914 -(1789 + 124) , #v50 do v51[v66]=v2(v1(v3(v50,v66,v66)));end return v6(v51);end local v26=v23;local function v27(...) return {...},v12("#",...);end local function v28() local v52=(function() return 0;end)();local v53=(function() return;end)();local v54=(function() return;end)();local v55=(function() return;end)();local v56=(function() return;end)();local v57=(function() return;end)();local v58=(function() return;end)();local v59=(function() return;end)();while true do local v68=(function() return 0 + 0 ;end)();while true do if ((1 + 0)~=v68) then else if (v52==(1 -0)) then v56=(function() return {};end)();v57=(function() return {v54,v55,nil,v56};end)();v58=(function() return v23();end)();v52=(function() return 2 -0 ;end)();end if (v52==(1 + 1)) then v59=(function() return {};end)();for v101= #"\\",v58 do local v102=(function() return 1636 -(1373 + 263) ;end)();local v103=(function() return;end)();local v104=(function() return;end)();local v105=(function() return;end)();while true do if (v102~=1) then else v105=(function() return nil;end)();while true do if (v103~=(1323 -(1249 + 73))) then else if (v104== #"|") then v105=(function() return v21()~=(1000 -(451 + 549)) ;end)();elseif (v104==2) then v105=(function() return v24();end)();elseif (v104== #"91(") then v105=(function() return v25();end)();end v59[v101]=(function() return v105;end)();break;end if ((0 + 0)==v103) then local v118=(function() return 1145 -(466 + 679) ;end)();local v119=(function() return;end)();while true do if (v118~=(0 + 0)) then else v119=(function() return 0 -0 ;end)();while true do if (1==v119) then v103=(function() return 1 -0 ;end)();break;end if (v119~=(0 -0)) then else v104=(function() return v21();end)();v105=(function() return nil;end)();v119=(function() return 1;end)();end end break;end end end end break;end if ((1900 -(106 + 1794))==v102) then v103=(function() return 1384 -(746 + 638) ;end)();v104=(function() return nil;end)();v102=(function() return 1 + 0 ;end)();end end end v57[ #"xnx"]=(function() return v21();end)();v52=(function() return 3;end)();end break;end if (v68~=(0 -0)) then else if (v52~=(341 -(218 + 123))) then else local v98=(function() return 1581 -(1535 + 46) ;end)();local v99=(function() return;end)();while true do if (v98==0) then v99=(function() return 0 -0 ;end)();while true do if ((1 + 0)==v99) then v55=(function() return {};end)();v52=(function() return 1;end)();break;end if (v99==0) then v53=(function() return function(v120,v121,v122) local v123=(function() return 114 -(4 + 110) ;end)();local v124=(function() return;end)();while true do if ((0 + 0)~=v123) then else v124=(function() return 0;end)();while true do if (v124~=(560 -(306 + 254))) then else local v1202=(function() return 0 + 0 ;end)();while true do if (v1202==(0 -0)) then v120[v121-#":" ]=(function() return v122();end)();return v120,v121,v122;end end end end break;end end end;end)();v54=(function() return {};end)();v99=(function() return 1 + 0 ;end)();end end break;end end end if (v52~=(6 -3)) then else for v106= #" ",v23() do local v107=(function() return v21();end)();if (v20(v107, #"]", #"}")==0) then local v109=(function() return 1467 -(899 + 568) ;end)();local v110=(function() return;end)();local v111=(function() return;end)();local v112=(function() return;end)();local v113=(function() return;end)();while true do if (v109~=1) then else local v114=(function() return 0 + 0 ;end)();local v115=(function() return;end)();while true do if (v114~=(166 -(122 + 44))) then else v115=(function() return 0;end)();while true do if (v115==(2 -1)) then v109=(function() return 2;end)();break;end if (v115==(0 -0)) then v112=(function() return nil;end)();v113=(function() return nil;end)();v115=(function() return 1;end)();end end break;end end end if (v109~=(603 -(268 + 335))) then else local v116=(function() return 290 -(60 + 230) ;end)();while true do if (v116==(573 -(426 + 146))) then v109=(function() return 1 -0 ;end)();break;end if ((65 -(30 + 35))==v116) then v110=(function() return 0 + 0 ;end)();v111=(function() return nil;end)();v116=(function() return 1457 -(282 + 1174) ;end)();end end end if (v109~=(1259 -(1043 + 214))) then else while true do if ((811 -(569 + 242))~=v110) then else local v125=(function() return 0 -0 ;end)();local v126=(function() return;end)();while true do if (v125==0) then v126=(function() return 0 -0 ;end)();while true do if (0==v126) then v111=(function() return v20(v107,2, #"nil");end)();v112=(function() return v20(v107, #"asd1",6);end)();v126=(function() return 1 + 0 ;end)();end if (v126~=(1025 -(706 + 318))) then else v110=(function() return  #"<";end)();break;end end break;end end end if ((582 -(361 + 219))~=v110) then else local v127=(function() return 1251 -(721 + 530) ;end)();local v128=(function() return;end)();while true do if (v127~=(1271 -(945 + 326))) then else v128=(function() return 0;end)();while true do if (v128~=(0 -0)) then else if (v20(v112, #"|", #" ")== #"!") then v113[2 + 0 ]=(function() return v59[v113[702 -(271 + 429) ]];end)();end if (v20(v112,2,2 + 0 )== #":") then v113[ #"xnx"]=(function() return v59[v113[ #"nil"]];end)();end v128=(function() return 983 -(18 + 964) ;end)();end if ((1501 -(1408 + 92))==v128) then v110=(function() return  #"19(";end)();break;end end break;end end end if (v110== #"91(") then if (v20(v112, #"19(", #"19(")~= #",") then else v113[ #"http"]=(function() return v59[v113[ #"0313"]];end)();end v54[v106]=(function() return v113;end)();break;end if (v110== #">") then local v130=(function() return 0;end)();local v131=(function() return;end)();while true do if (v130~=(1086 -(461 + 625))) then else v131=(function() return 0;end)();while true do if (v131~=1) then else v110=(function() return 2 + 0 ;end)();break;end if (v131==(1288 -(993 + 295))) then v113=(function() return {v22(),v22(),nil,nil};end)();if (v111==(0 + 0)) then local v2947=(function() return 126 -(116 + 10) ;end)();local v2948=(function() return;end)();while true do if (v2947~=(0 + 0)) then else v2948=(function() return 1171 -(418 + 753) ;end)();while true do if (v2948==(0 + 0)) then v113[ #"91("]=(function() return v22();end)();v113[ #".dev"]=(function() return v22();end)();break;end end break;end end elseif (v111== #"]") then v113[ #"asd"]=(function() return v23();end)();elseif (v111==2) then v113[ #"asd"]=(function() return v23() -(2^(754 -(542 + 196))) ;end)();elseif (v111== #"19(") then local v3842=(function() return 0 -0 ;end)();local v3843=(function() return;end)();while true do if (v3842~=0) then else v3843=(function() return 0 + 0 ;end)();while true do if (v3843~=0) then else v113[ #"nil"]=(function() return v23() -((1 + 1)^(2 + 14)) ;end)();v113[ #"0313"]=(function() return v22();end)();break;end end break;end end end v131=(function() return 1 + 0 ;end)();end end break;end end end end break;end end end end for v108= #"|",v23() do v55,v108,v28=(function() return v53(v55,v108,v28);end)();end return v57;end v68=(function() return 2 -1 ;end)();end end end end local function v29(v60,v61,v62) local v63=v60[2 -1 ];local v64=v60[1553 -(1126 + 425) ];local v65=v60[(1088 -(8 + 672)) -(118 + 287) ];return function(...) local v69=v63;local v70=v64;local v71=v65;local v72=v27;local v73=1;local v74= -(1 + 0);local v75={};local v76={...};local v77=v12("#",...) -(1122 -(118 + 1003)) ;local v78={};local v79={};for v89=0 -0 ,v77 do if (v89>=v71) then v75[v89-v71 ]=v76[v89 + (378 -(142 + (1671 -(740 + 696)))) ];else v79[v89]=v76[v89 + 1 ];end end local v80=(v77-v71) + (4 -3) ;local v81;local v82;while true do local v90=0;while true do if ((v90==((1047 -(353 + 693)) + 0)) or (2469<=1885)) then if (v82<=(1070 -(553 + 424))) then if (v82<=(86 -40)) then if (v82<=(20 + 2)) then if (v82<=(10 + 0)) then if (v82<=(3 + 1 + 0)) then if (v82<=(1 + 0)) then if ((v82==(0 + 0)) or (4125>=4263)) then local v133=0 -0 ;local v134;while true do if (v133==(0 -0)) then v134=v81[4 -2 ];v79[v134](v79[v134 + 1 + 0 ]);break;end end else local v135;v79[v81[9 -7 ]]=v61[v81[3]];v73=v73 + ((2247 -(35 + 1458)) -(239 + 514)) ;v81=v69[v73];v79[v81[2]]=v61[v81[2 + 1 ]];v73=v73 + 1 ;v81=v69[v73];v79[v81[2]]=v79[v81[1332 -(797 + 532) ]];v73=v73 + 1 + 0 ;v81=v69[v73];v135=v81[1 + 1 ];v79[v135](v13(v79,v135 + 1 ,v81[6 -(1873 -(1821 + 49)) ]));v73=v73 + (1203 -(373 + 829)) ;v81=v69[v73];do return;end end elseif (v82<=(733 -(476 + 255))) then local v143;local v144;local v145;v79[v81[1132 -(369 + 761) ]]();v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[2 -0 ]]=v61[v81[3]];v73=v73 + 1 ;v81=v69[v73];v79[v81[3 -1 ]]={};v73=v73 + (239 -(64 + 174)) ;v81=v69[v73];v79[v81[1 + 1 ]]=v81[3 -0 ];v73=v73 + 1 ;v81=v69[v73];v79[v81[338 -(144 + 192) ]]=v79[v81[3]];v73=v73 + (217 -(42 + 174)) ;v81=v69[v73];v79[v81[2 + 0 ]]=v81[3 + 0 ];v73=v73 + 1 + 0 ;v81=v69[v73];v145=v81[3];v144=v79[v145];for v1203=v145 + (1505 -(363 + 1141)) ,v81[1584 -(1183 + 397) ] do v144=v144   .. v79[v1203] ;end v79[v81[5 -3 ]]=v144;v73=v73 + (2 -1) + 0 ;v81=v69[v73];v79[v81[2 + 0 ]][v81[3]]=v79[v81[1979 -(1913 + 62) ]];v73=v73 + (1735 -(727 + 1007)) + 0 ;v81=v69[v73];v79[v81[5 -3 ]][v81[1936 -(565 + 1368) ]]=v81[15 -11 ];v73=v73 + (1662 -(1477 + 184)) ;v81=v69[v73];v79[v81[2 -0 ]][v81[3]]=v81[(171 -(165 + 2)) + 0 ];v73=v73 + (857 -(564 + 292)) ;v81=v69[v73];v143=v81[2];v79[v143](v79[v143 + (1 -0) ]);v73=v73 + 1 ;v81=v69[v73];v73=v81[8 -5 ];elseif ((3848>=1225) and (v82==(307 -(244 + 60)))) then local v1264;v79[v81[2 + 0 ]]=v79[v81[479 -(41 + 435) ]];v73=v73 + (1002 -(938 + 63)) ;v81=v69[v73];v1264=v81[2 + 0 ];v79[v1264](v79[v1264 + 1 ]);v73=v73 + (1126 -((2595 -(1028 + 631)) + 189)) ;v81=v69[v73];v79[v81[2]]=v62[v81[1 + 2 ]];v73=v73 + ((3229 -(311 + 1304)) -(1565 + 48)) ;v81=v69[v73];v79[v81[2 + 0 ]]=v81[6 -3 ];v73=v73 + (1139 -(782 + 356)) ;v81=v69[v73];v1264=v81[269 -(176 + 91) ];v79[v1264](v79[v1264 + (2 -1) ]);v73=v73 + (1 -0) ;v81=v69[v73];v73=v81[1095 -(975 + 117) ];else local v1274=v81[2];local v1275=v79[v1274 + (1877 -(157 + 1718)) ];local v1276=v79[v1274] + v1275 ;v79[v1274]=v1276;if (v1275>0) then if (v1276<=v79[v1274 + 1 + 0 ]) then local v3752=0 -0 ;while true do if ((1480>1337) and (v3752==(0 -0))) then v73=v81[1021 -(697 + 321) ];v79[v1274 + (7 -4) ]=v1276;break;end end end elseif (v1276>=v79[v1274 + (1 -0) ]) then v73=v81[3];v79[v1274 + 3 ]=v1276;end end elseif (v82<=((3 + 12) -(1 + 7))) then if ((2171>=726) and (v82<=(2 + 3))) then local v167;local v168;local v167,v169;local v170;local v171;v79[v81[2]]=v62[v81[3]];v73=v73 + ((580 -(512 + 67)) -0) ;v81=v69[v73];v79[v81[5 -3 ]]=v62[v81[1230 -(322 + 905) ]];v73=v73 + 1 ;v81=v69[v73];v171=v81[613 -((1632 -1030) + 9) ];v170=v79[v81[1192 -(449 + 740) ]];v79[v171 + (873 -(826 + 46)) ]=v170;v79[v171]=v170[v81[(187 + 764) -(73 + 172 + 702) ]];v73=v73 + (3 -2) ;v81=v69[v73];v171=v81[2];v167,v169=v72(v79[v171](v79[v171 + 1 + 0 ]));v74=(v169 + v171) -(1899 -(260 + 1638)) ;v168=0;for v1204=v171,v74 do v168=v168 + (441 -((503 -121) + (177 -119))) ;v79[v1204]=v167[v168];end v73=v73 + (3 -(1 + 1)) ;v81=v69[v73];v171=v81[2 + 0 ];v167={v79[v171](v13(v79,v171 + (1 -0) ,v74))};v168=0 -0 ;for v1207=v171,v81[11 -(1796 -(395 + 1394)) ] do v168=v168 + (1206 -(902 + 303)) ;v79[v1207]=v167[v168];end v73=v73 + 1 ;v81=v69[v73];v73=v81[5 -2 ];elseif (v82>(14 -8)) then local v1278;local v1279,v1280;local v1281;local v1282;v1282=v81[1 + 1 ];v1281=v79[v81[1693 -(1121 + 569) ]];v79[v1282 + (215 -(22 + 192)) ]=v1281;v79[v1282]=v1281[v81[4]];v73=v73 + (684 -(483 + 200)) ;v81=v69[v73];v79[v81[1465 -(1404 + 59) ]]=v81[8 -5 ];v73=v73 + ((3 -2) -0) ;v81=v69[v73];v1282=v81[2];v79[v1282]=v79[v1282](v13(v79,v1282 + (766 -(468 + 297)) ,v81[565 -(334 + 228) ]));v73=v73 + (3 -2) ;v81=v69[v73];v79[v81[2]]=v79[v81[6 -3 ]][v81[4]];v73=v73 + ((1 + 0) -0) ;v81=v69[v73];v1282=v81[2];v1281=v79[v81[1 + 2 ]];v79[v1282 + (237 -(141 + 95)) ]=v1281;v79[v1282]=v1281[v81[4 + 0 ]];v73=v73 + (2 -1) ;v81=v69[v73];v79[v81[5 -3 ]]=v62[v81[6 -3 ]];v73=v73 + 1 ;v81=v69[v73];v79[v81[1 + 1 ]]=v79[v81[8 -5 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v1282=v81[5 -3 ];v1279,v1280=v72(v79[v1282](v79[v1282 + 1 + (467 -(143 + 324)) ]));v74=(v1280 + v1282) -(1 -0) ;v1278=0 + 0 ;for v2545=v1282,v74 do local v2546=163 -(92 + 71) ;while true do if (v2546==((0 -0) + 0)) then v1278=v1278 + (1 -0) ;v79[v2545]=v1279[v1278];break;end end end v73=v73 + (766 -(574 + 191)) ;v81=v69[v73];v1282=v81[2 + 0 ];v79[v1282](v13(v79,v1282 + ((1 + 1) -1) ,v74));else local v1303=v81[2];v79[v1303]=v79[v1303](v79[v1303 + 1 ]);end elseif (v82<=(5 + 3)) then local v185=0;local v186;while true do if ((1618<2034) and (v185==(858 -(254 + 595)))) then v73=v73 + (127 -(55 + 71)) ;v81=v69[v73];do return;end break;end if (v185==(6 -(2 -1))) then v73=v73 + (1791 -(573 + 524 + 693)) ;v81=v69[v73];v79[v81[5 -3 ]]=v81[1 + 2 ];v73=v73 + (1 -0) ;v185=(2048 -(342 + 761)) -(498 + 216 + 225) ;end if (v185==(23 -15)) then v79[v186]=v79[v186](v13(v79,v186 + (1 -0) ,v81[3]));v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[2]][v81[3 -0 ]]=v79[v81[810 -(118 + 688) ]];v185=(156 -99) -(25 + 23) ;end if (v185==(1 + 0 + 3)) then v79[v81[2]]=v62[v81[1889 -(927 + 959) ]];v73=v73 + 1 ;v81=v69[v73];v79[v81[6 -4 ]]=v79[v81[735 -(16 + 716) ]][v81[7 -3 ]];v185=102 -(11 + 86) ;end if ((v185==(4 -2)) or (2119<22)) then v73=v73 + (286 -(175 + 110)) ;v81=v69[v73];v79[v81[4 -2 ]]=v79[v81[14 -11 ]][v81[(2723 -923) -(503 + 1293) ]];v73=v73 + 1 ;v185=8 -(8 -3) ;end if (v185==(3 + 0)) then v81=v69[v73];v79[v81[1063 -(810 + 251) ]]=v79[v81[3 + 0 ]][v81[2 + 0 + 2 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v185=(1694 -(889 + 268)) -(43 + 490) ;end if (v185==(739 -(711 + 13 + 9))) then v81=v69[v73];v79[v81[7 -5 ]]=v81[862 -(240 + 619) ];v73=v73 + 1 + 0 ;v81=v69[v73];v185=7;end if ((v185==(1 -0)) or (4099<3869)) then v79[v81[1 + 1 ]]=v79[v81[(281 + 1466) -((3414 -2070) + 400) ]][v81[409 -(255 + (447 -(196 + 101))) ]];v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[2 + 0 ]]=v79[v81[12 -9 ]][v81[(21 -9) -8 ]];v185=(5119 -3378) -(404 + 1335) ;end if ((v185==(406 -(183 + 223))) or (4107<610)) then v186=nil;v79[v81[2 -0 ]]=v62[v81[2 + 1 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v185=338 -(10 + 327) ;end if (v185==(5 + 2)) then v79[v81[2]]=v81[341 -(118 + 220) ];v73=v73 + 1 + 0 ;v81=v69[v73];v186=v81[2];v185=457 -(108 + 341) ;end end elseif (v82>(5 + 4)) then local v1305;local v1306;v1306=v81[8 -6 ];v1305=v79[v81[3]];v79[v1306 + (1494 -(711 + 782)) ]=v1305;v79[v1306]=v1305[v81[7 -3 ]];v73=v73 + 1 ;v81=v69[v73];v79[v81[471 -(270 + 199) ]]=v79[v81[1 + 0 + 2 ]];v73=v73 + ((5884 -4064) -(580 + 1239)) ;v81=v69[v73];v79[v81[5 -(7 -4) ]]=v79[v81[3]];v73=v73 + (2 -1) ;v81=v69[v73];v79[v81[2 + 0 ]]={};v73=v73 + 1 + 0 + 0 ;v81=v69[v73];v79[v81[2]]=v62[v81[4 -1 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[(1587 -(431 + 1152)) -2 ]]=v79[v81[3]][v81[4]];v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[1169 -(645 + 522) ]]=v79[v81[1793 -(1010 + 666 + 114) ]][v81[4 + 0 ]];v73=v73 + ((348 -(107 + 237)) -3) ;v81=v69[v73];v79[v81[5 -3 ]]=v79[v81[1839 -(1045 + 791) ]][v81[9 -5 ]];v73=v73 + (1 -0) ;v81=v69[v73];v79[v81[1802 -(690 + 1110) ]]=v79[v81[508 -(351 + 154) ]][v81[1578 -(1281 + 293) ]];v73=v73 + (267 -(28 + 238)) ;v81=v69[v73];v1306=v81[4 -2 ];v79[v1306]=v79[v1306](v13(v79,v1306 + (1560 -(1381 + 178)) ,v81[3 + 0 ]));v73=v73 + 1 ;v81=v69[v73];v79[v81[2]][v81[3]]=v79[v81[4 + 0 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v1306=v81[6 -4 ];v79[v1306]=v79[v1306](v13(v79,v1306 + 1 + 0 ,v81[3]));v73=v73 + (471 -(381 + 89)) ;v81=v69[v73];v79[v81[2]]=v79[v81[3 + 0 ]];v73=v73 + 1 + (0 -0) ;v81=v69[v73];v1306=v81[2];v1305=v79[v81[4 -1 ]];v79[v1306 + (1157 -(1074 + 82)) ]=v1305;v79[v1306]=v1305[v81[8 -(1501 -(1374 + 123)) ]];v73=v73 + 1 ;v81=v69[v73];v1306=v81[1786 -(214 + 1570) ];v79[v1306](v79[v1306 + (1456 -(990 + 465)) ]);v73=v73 + 1 + (0 -0) ;v81=v69[v73];v73=v81[2 + 1 ];else local v1338;v79[v81[2]]=v62[v81[2 + 1 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[7 -5 ]]=v79[v81[1729 -(1568 + 100 + 58) ]][v81[4]];v73=v73 + 1 ;v81=v69[v73];v79[v81[628 -(512 + 114) ]]=v79[v81[7 -4 ]][v81[1 + 3 ]];v73=v73 + 1 ;v81=v69[v73];v79[v81[3 -1 ]]=v79[v81[10 -7 ]][v81[2 + 2 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[2 + 0 ]]=v79[v81[1606 -(454 + 1149) ]][v81[13 -(17 -8) ]];v73=v73 + (1995 -(109 + 1885)) ;v81=v69[v73];v79[v81[2]]=v79[v81[1472 -(1269 + 200) ]][v81[(15 -8) -3 ]];v73=v73 + (816 -(98 + 717)) ;v81=v69[v73];v79[v81[828 -(802 + 11 + 13) ]]=v81[5 -(2 + 0) ];v73=v73 + (1 -0) ;v81=v69[v73];v1338=v81[2];v79[v1338](v13(v79,v1338 + 1 ,v81[1 + 2 ]));v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[2]]=v62[v81[1 + 2 ]];v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[5 -3 ]]=v81[640 -(21 + 616) ];v73=v73 + (3 -2) ;v81=v69[v73];v1338=v81[(1 -0) + 1 ];v79[v1338](v79[v1338 + 1 + 0 ]);v73=v73 + 1 + 0 ;v81=v69[v73];v79[v81[2 + 0 ]]=v81[3];v73=v73 + 1 + 0 ;v81=v69[v73];v73=v81[2 + 1 ];end elseif ((4656>1721) and (v82<=(1449 -((1234 -(12
+-- Intro
+Notification:Notify(
+    {Title = "Loading", Description = "Please Wait"},
+    {OutlineColor = Color3.fromRGB(76, 0, 130),Time = 5, Type = "default"}
+)
+
+--loadstring(game:HttpGet("https://pastebin.com/raw/4RxNLy1x",true))()
+
+local warn_who_run = loadstring(game:HttpGet("https://raw.githubusercontent.com/wino444/warn/refs/heads/main/%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99"))()
+
+wait(5)
+
+-- Ui Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/wino444/win/refs/heads/main/ui"))()
+
+-- Window
+local Window = Library.CreateLib("win X | HUB ", "Serpent")
+
+-- Toggle
+local Toggle = Instance.new("ScreenGui")
+local UIToggle = Instance.new("TextButton")
+
+Toggle.Name = "Toggle"
+Toggle.Parent = game.CoreGui
+
+UIToggle.Name = "UIToggle"
+UIToggle.Parent = Toggle
+UIToggle.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+UIToggle.BackgroundTransparency = 0.660
+UIToggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+UIToggle.Size = UDim2.new(0.0650164187, 0, 0.0888099447, 0)
+UIToggle.Font = Enum.Font.SourceSans
+UIToggle.Text = "Toggle"
+UIToggle.TextColor3 = Color3.fromRGB(75, 0, 130)
+UIToggle.TextSize = 24.000
+UIToggle.Draggable = true
+UIToggle.Active = true
+UIToggle.TextXAlignment = Enum.TextXAlignment.Left
+UIToggle.MouseButton1Click:connect(function()
+    Library:ToggleUI()
+end)
+
+-- Notification library
+ local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/win444/gui-/main/%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99"))();
+ local Notify = Notification.Notify;
+
+-- Tabs
+local Welcome = Window:NewTab("Welcome")
+local We = Welcome:NewSection("Hello, "..game.Players.LocalPlayer.Name)
+
+local Main = Window:NewTab("Main")
+local ch = Main:NewSection("Main Options")
+local Ma = Main:NewSection("Main Options")
+
+local Teleports = Window:NewTab("สถานที่")
+local Te = Teleports:NewSection("วาป")
+
+local MoneySystem = Window:NewTab("เงิน")
+local Money = MoneySystem:NewSection("ระบบเงิน")
+
+local Rocket = Window:NewTab("จรวด")
+local Ro = Rocket:NewSection("เกี่ยวกับจรวด")
+
+local When = Window:NewTab("แกล้งคน")
+local Wh = When:NewSection("FE")
+
+local box = Window:NewTab("prat")
+local bo = box:NewSection("เกี่ยวกับชิ้นส่วนไม่ได้ยึด")
+
+local ScriptFE = Window:NewTab("FE")
+local FE = ScriptFE:NewSection("คนอื่นเห็น")
+
+local More = Window:NewTab("เพิ่มเติม")
+local more = More:NewSection("คนสร้างใช้")
+
+--local Tab1Sec = Window:NewTab("Main")
+--local Tab1Section = Tab1Sec:NewSection("Main Options")
+
+                                           --function
+local function debugPrintChildren(parent)
+    local maxChildren = 10  -- Number of children to print
+    local children = parent:GetChildren()
+    print("Children of", parent.Name, ":")
+    for i, child in ipairs(children) do
+        if i > maxChildren then break end
+        print(i, child.Name)
+    end
+end
+
+local function clickAllDetectors()
+    local index = 470  -- Adjust index as needed
+    local parentFolder = workspace:GetChildren()[index]
+    
+    if parentFolder then
+        print("Checking parent folder:", parentFolder.Name)
+        local pillsFolder = parentFolder:FindFirstChild("PillsFolder")
+        
+        if pillsFolder then
+            print("PillsFolder found.")
+            local colors = {"Blue", "White", "Yellow"}
+
+            for _, color in ipairs(colors) do
+                local colorFolder = pillsFolder:FindFirstChild(color)
+                
+                if colorFolder then
+                    print(color .. " folder found. Checking for ClickDetectors...")
+                    for _, v in pairs(colorFolder:GetDescendants()) do
+                        if v:IsA("ClickDetector") then
+                            -- Ensure fireclickdetector is defined
+                            fireclickdetector(v)
+                        end
+                    end
+                else
+                    warn(color .. " folder not found in PillsFolder.")
+                end
+            end
+        else
+            warn("PillsFolder not found in the specified parent folder.")
+        end
+    else
+        warn("Parent folder not found in workspace.")
+    end
+end
+
+-- Tab
+local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
+
+We:NewButton("Player : "..game.Players.LocalPlayer.Name.." | "..game.Players.LocalPlayer.UserId, "?", function()
+print("hi")
+end)
+
+We:NewButton("Game : "..game.PlaceId.." | "..PlaceName.Name, "?", function()
+print("hi")
+end)
+
+We:NewButton("Account Age : "..game.Players.LocalPlayer.AccountAge.." | Premium : Yes", "?", function()
+print("hi")
+end)
+
+We:NewKeybind("Ui Toggle (Key-Bind)", "?", Enum.KeyCode.F, function()
+    Library:ToggleUI()
+end)
+
+-- Tab1
+ch:NewSlider("Walkspeed", "SliderInfo", 120, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = s     
+end)
+
+ch:NewSlider("JumpPower", "SliderInfo", 300, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+-- ตัวแปรเปิด/ปิด NoCooldown
+local NoCooldown = false
+
+-- สร้างตาราง hooks เพื่อเก็บ event hooks
+local hooks = {}
+
+-- ค้นหา ProximityPrompt และจัดการ Event
+for _, object in pairs(workspace:GetDescendants()) do
+    if object:IsA("ProximityPrompt") then
+        -- บันทึกฟังก์ชันเดิมไว้
+        local originalAction = object.Triggered:Connect(function(player)
+            if NoCooldown then
+                print("ProximityPrompt Triggered by: ", player.Name)
+                object.HoldDuration = 0 -- ทำให้กดแล้วติดทันที
+            else
+                object.HoldDuration = 1 -- ค่าเริ่มต้น (หรือเปลี่ยนเป็นค่าตามเดิมของเกม)
+            end
+        end)
+
+        -- ใส่ event เข้าไปในรายการ hooks
+        table.insert(hooks, originalAction)
+    end
+end
+
+-- ปุ่มเปิด/ปิด NoCooldown
+ch:NewToggle("ไม่คูลดาวน์ (ProximityPrompt)", "?", function(win)
+    NoCooldown = win
+    print("NoCooldown: " .. tostring(NoCooldown))
+end)
+
+
+
+
+
+
+Ma:NewButton("เกาะ", '?', function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-113.26754760742188, 47.92503356933594, -4.570798397064209)
+end)
+
+Ma:NewButton("ลอบบี้", "?", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-278, 179.4999542236328, 343)
+end)
+
+Ma:NewToggle("Infinite Jumps", "?", function(state)
+    local InfiniteJumpEnabled = state
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+        end
+    end)
+end)
+
+Ma:NewButton("Fly GUI", "not made by us", function()
+    --ARCEUS X FLY V2 SCRIPT BY me_ozoneYT
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+Ma:NewButton("GUI ลอย", '?', function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+end)
+
+Ma:NewToggle("Godmode", '?', function(Value)
+    _G.spam = Value 
+while _G.spam do wait() 
+	             game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	       end
+end)
+
+Ma:NewButton("Script MyWorld", "??", function()    
+       loadstring(game:HttpGet(('https://pastefy.app/Oic24KzG/raw'),true))()
+end) 
+
+Ma:NewButton("clicktp", "??", function()    
+          mouse = game.Players.LocalPlayer:GetMouse()
+ tool = Instance.new("Tool")
+ tool.RequiresHandle = false
+ tool.Name = "Click TP"
+ tool.Activated:connect(function()
+ local pos = mouse.Hit+Vector3.new(0,2.5,0)
+ pos = CFrame.new(pos.X,pos.Y,pos.Z)
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+ end)
+ tool.Parent = game.Players.LocalPlayer.Backpack
+ wait(0.07)
+ local TweenService = game:GetService("TweenService")
+ local UserInputService = game:GetService("UserInputService")
+ local Players = game:GetService("Players")
+ 
+ local tool = Instance.new("Tool")
+ tool.RequiresHandle = false
+ tool.Name = "Tween Click TP"
+ local function onActivated()
+	 local mouse = Players.LocalPlayer:GetMouse()
+	 local pos = mouse.Hit + Vector3.new(0,2.5,0)
+	 local humanoidRootPart = Players.LocalPlayer.Character.HumanoidRootPart
+ 
+	 local tweenInfo = TweenInfo.new(
+		 1,
+		 Enum.EasingStyle.Quad,
+		 Enum.EasingDirection.Out,
+		 0,
+		 false,
+		 0
+	 )
+ 
+	 local tween = TweenService:Create(humanoidRootPart, tweenInfo, {
+		 CFrame = CFrame.new(pos.X, pos.Y, pos.Z)
+	 })
+ 
+	 tween:Play()
+ end
+ 
+ tool.Activated:Connect(onActivated)
+ tool.Parent = Players.LocalPlayer.Backpack
+					 end)
+
+Te:NewButton("จุดเกิด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70.08087158203125, 177.2809600830078, 306.34375)
+end)    
+
+Te:NewButton("ร้านชื้อของ", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20.928678512573242, 177.74801635742188, 219.13272094726562)
+end) 
+
+Te:NewButton("หลังตู้ATM", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.436490058898926, 177.74803161621094, 213.44219970703125)
+end) 
+
+Te:NewButton("โรงพยาบาล", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-155.70863342285156, 178.57505798339844, 214.75289916992188)--โรงพยาบาล
+end) 
+
+Te:NewButton("ฐานปล่อยจรวด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.0702209472656, 176.9749298095703, 219.04412841796875)--ที่ปล่อยจรวด
+end) 
+
+Te:NewButton("โรงเรียน", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-100.95848846435547, 164.52853393554688, 135.37594604492188)
+end)
+
+Te:NewButton("ห้องใต้ดิน", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-143.35214233398438, 140.42848205566406, 162.5637969970703)
+end)
+
+Te:NewButton("จุดขายปืน", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-232.77244567871094, 202.8300323486328, -133.4486541748047)
+end)
+
+Te:NewButton("สถานีตำรวจ", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(175.17926025390625, 177.53814697265625, 247.49310302734375)--สถานีตำรวจ
+end) 
+
+Te:NewButton("จุดชื้อบ้าน1", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(250.9174346923828, 167.49777221679688, 103.77043914794922)--จุดชื้อบ้าน1
+end) 
+
+Te:NewButton("วัด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(446.1864929199219, 173.77708435058594, -42.36382293701172)
+end) 
+
+Te:NewButton("ร้านชื้อรถ", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(384.1832580566406, 171.00828552246094, -209.54486083984375)
+end) 
+
+-- ตารางสำหรับเก็บจำนวนเงินและรอบ
+local moneyRounds = {
+    [100] = 1,       -- 100 เงิน = 1 รอบ
+    [1000] = 10,     -- 1000 เงิน = 10 รอบ
+    [10000] = 100,   -- 10000 เงิน = 100 รอบ
+    [100000] = 1000, -- 100000 เงิน = 1000 รอบ
+    [1000000] = 10000, -- 1000000 เงิน = 10000 รอบ
+    [10000000] = 100000 -- 10000000 เงิน = 100000 รอบ
+}
+
+local selectedAmount = nil -- ตัวแปรสำหรับเก็บจำนวนเงินที่เลือก
+
+-- ตารางสำหรับตัวเลือกใน Dropdown ที่เป็นคำแบบไทย
+local dropdownOptions = {
+    ["1ร้อยบาท"] = 100,
+    ["1พันบาท"] = 1000,
+    ["1หมื่นบาท"] = 10000,
+    ["1แสนบาท"] = 100000,
+    ["1ล้านบาท"] = 1000000,
+    ["10ล้านบาท"] = 10000000
+}
+
+-- Dropdown สำหรับเลือกจำนวนเงินแบบคำภาษาไทย
+Money:NewDropdown("เลือกจำนวนเงิน", "DropdownInf", {"1ร้อยบาท", "1พันบาท", "1หมื่นบาท", "1แสนบาท", "1ล้านบาท", "10ล้านบาท"}, function(currentOption)
+    selectedAmount = dropdownOptions[currentOption] -- แปลงตัวเลือกภาษาไทยเป็นจำนวนเงิน
+end)
+
+-- ฟังก์ชันเพื่อยิงรีโมท
+local function fireRemote(roundsToFire)
+    local args = {
+        [1] = "Sell"
+    }
+
+    for i = 1, roundsToFire do
+        game:GetService("ReplicatedStorage").House:FireServer(unpack(args))
+    end
+
+    print("ยิงรีโมทไปทั้งหมด " .. roundsToFire .. " รอบ สำหรับเงิน " .. selectedAmount .. " บาท")
+end
+
+-- ปุ่มสำหรับยิงรีโมท
+Money:NewButton("กดยิง", "ยิงรีโมทตามจำนวนเงินที่เลือก", function()
+    if selectedAmount then
+        local rounds = moneyRounds[selectedAmount] -- ค้นหารอบจากตาราง
+
+        if rounds then
+            fireRemote(rounds) -- ยิงรีโมทตามจำนวนรอบ
+        else
+            warn("ไม่สามารถค้นหาเงินที่เลือกได้!")
+        end
+    else
+        warn("กรุณาเลือกจำนวนเงินก่อน!")
+    end
+end)
+
+
+-- ตัวแปรชื่อผู้เล่นสำหรับส่งเงิน
+_G.moneyPlayerName = ""
+_G.amount = 0
+_G.autoSend = false
+
+-- กล่องข้อความสำหรับชื่อผู้เล่นในฟังก์ชันส่งเงิน
+Money:NewTextBox("ชื่อผู้เล่นสำหรับส่งเงิน", "", function(playerName)
+    if playerName and playerName ~= "" then
+        _G.moneyPlayerName = playerName
+        print("ชื่อผู้เล่นสำหรับส่งเงินถูกตั้งค่าเป็น:", _G.moneyPlayerName)
+    else
+        print("กรุณากรอกชื่อผู้เล่นสำหรับส่งเงิน")
+    end
+end)
+
+-- กล่องข้อความสำหรับจำนวนเงิน
+Money:NewTextBox("จำนวนเงิน", "ใส่จำนวนเงิน", function(amount)
+    local numAmount = tonumber(amount)
+    if numAmount and numAmount > 0 then
+        _G.amount = numAmount
+        print("จำนวนเงินถูกตั้งค่าเป็น:", _G.amount)
+    else
+        print("กรุณากรอกจำนวนเงินที่ถูกต้อง")
+    end
+end)
+
+-- ฟังก์ชันส่งเงินอัตโนมัติ
+Money:NewToggle("ส่งเงินออโต้(ทุก1วิ)", '?', function(isEnabled)
+    _G.autoSend = isEnabled
+    while _G.autoSend do
+        wait(1)
+        if _G.moneyPlayerName ~= "" and _G.amount > 0 then
+            local args = {
+                [1] = _G.moneyPlayerName, -- ชื่อผู้เล่นที่ถูกกำหนดไว้สำหรับส่งเงิน
+                [2] = _G.amount -- จำนวนเงิน
+            }
+            game:GetService("ReplicatedStorage").DonateEvent:FireServer(unpack(args))
+        end
+    end
+end)
+
+-- ปุ่มสำหรับส่งเงินครั้งเดียว
+Money:NewButton("กดส่งรอบเดียว", "ส่งรอบเดียว", function()
+    if _G.moneyPlayerName ~= "" and _G.amount > 0 then
+        local args = {
+            [1] = _G.moneyPlayerName, -- ชื่อผู้เล่นที่ถูกกำหนดไว้สำหรับส่งเงิน
+            [2] = _G.amount -- จำนวนเงิน
+        }
+        game:GetService("ReplicatedStorage").DonateEvent:FireServer(unpack(args))
+    else
+        print("กรุณากรอกชื่อผู้เล่นและจำนวนเงินให้ครบถ้วน")
+    end
+end)
+
+Money:NewButton("1แสน กดรอบเดียว(ต้องอยู่ใกล้)", "??", function()    
+for i=1, 1000 do
+fireproximityprompt(workspace.ATMModel.Model.Part.ProximityPrompt, 1, true)
+end
+end)
+
+Money:NewButton("1แสน กดรอบเดียว(ขาย)", "??", function()    
+local args = {
+    [1] = "Sell"
+}
+
+for i = 1, 1000000 do
+game:GetService("ReplicatedStorage").House:FireServer(unpack(args))
+end
+end)
+
+
+
+
+Money:NewToggle("ออโต้ ปล้น(ต้องอยู่ใกล้)", '?', function(Value)
+    _G.boom = Value 
+while _G.boom do wait()
+       fireproximityprompt(workspace.ATMModel.Model.Part.ProximityPrompt, 1, true)
+       end
+end)
+
+
+
+Money:NewToggle("ออโต้ กดรับเงิน", '?', function(Value)
+_G.boom = Value 
+while _G.boom do wait()
+game:GetService'VirtualUser':CaptureController()
+game:GetService'VirtualUser':Button1Down(Vector2.new(393, 184))
+end    
+end)
+
+Money:NewButton("ปล้น ไม่คูลดาวน์(ต้องอยู่ใกล้)", "??", function()    
+fireproximityprompt(workspace.ATMModel.Model.Part.ProximityPrompt, 1, true)
+end)
+
+Money:NewToggle("ออโต้ฟาร์มเงิน(ได้น้อย)", "?", function(Value)
+    _G.auto = Value
+    while _G.auto do
+        wait(1) -- Added delay to prevent rapid execution
+
+        local planeFolder = workspace:FindFirstChild("PlaneFolder")
+        
+        if planeFolder then
+            for _, v in pairs(planeFolder:GetDescendants()) do
+                if v:IsA("TouchTransmitter") then
+                    -- Ensure firetouchinterest is defined
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) -- 0 is touch
+                    wait(0.1) -- Short delay to avoid rapid firing
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+                end
+            end
+        else
+            warn("PlaneFolder not found in workspace.")
+        end
+    end
+end)
+
+
+-- Hook into the toggle
+Money:NewToggle("ออโต้ฟาร์มเงิน(โรงพยาบาล)", '?', function(value)
+    _G.boom = value
+    while _G.boom do
+        wait(1) -- Adding a delay to avoid rapid firing and reduce server load
+        clickAllDetectors()
+    end
+end)
+
+Money:NewToggle("ออโต้ปล้นเงิน(อันเดียว)(ห้องใต้ดินโรงเรียน)", '?', function(Value)
+_G.boom = Value 
+while _G.boom do wait()
+fireproximityprompt(workspace.Safe.Door.ProximityPrompt, 1, true)
+end    
+end)
+
+
+Money:NewToggle("ถือMoney Bagออโต้", '?', function(Value)
+_G.boom = Value 
+while _G.boom do wait()
+tool = "Money Bag" 
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(tool))
+game:GetService'VirtualUser':CaptureController()
+game:GetService'VirtualUser':Button1Down(Vector2.new(393, 184))
+end    
+end)
+
+Money:NewButton("รับของทั้งหมด(ที่เจอได้)", "??", function()    
+local ccamount = 0
+ 
+	 for i,v in pairs(game:GetDescendants()) do
+		 if v:IsA("ClickDetector") then
+				ccamount = ccamount + 1
+			 fireclickdetector(v)
+		 end
+	 end
+
+ wait();
+ 
+ Notify({
+ Description = "Fired " .. ccamount .. " amount of click detectors";
+ Title = "Nameless Admin";
+ Duration = 7;
+ 
+ });
+ end)
+
+Money:NewButton("ซื้อปืน", "??", function()
+    -- Define the index of the child in the workspace
+    local index = 428
+
+    -- Get the child from workspace using the index
+    local targetChild = workspace:GetChildren()[index]
+
+    if targetChild then
+        -- Attempt to get the "Head" and "ClickDetector" from the target child
+        local head = targetChild:FindFirstChild("Head")
+        if head then
+            local clickDetector = head:FindFirstChildOfClass("ClickDetector")
+            if clickDetector then
+                -- Ensure fireclickdetector is defined
+                fireclickdetector(clickDetector)
+                print("ClickDetector fired successfully.")
+            else
+                warn("ClickDetector not found in Head.")
+            end
+        else
+            warn("Head not found in the target child.")
+        end
+    else
+        warn("Target child not found in workspace at index " .. index)
+    end
+end)
+
+
+Money:NewButton("??", "??", function()    
+       
+end)
+
+
+
+
+
+Ro:NewButton("ปุ่มปล่อยจรวด", "??", function()    
+       fireclickdetector(workspace["Rocket Ship"].Rocket.Trigger.ClickDetector)--ปลอยจรวด
+end) 
+
+Ro:NewButton("ฐานปล่อยจรวด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.0702209472656, 176.9749298095703, 219.04412841796875)--ที่ปล่อยจรวด
+end) 
+
+Ro:NewButton("ข้างในจรวด", "??", function()    
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-354.61431884765625, 263.8428955078125, 231.1928253173828)--ข้างในจรวด
+end) 
+
+Wh:NewButton("แป้นพิม", "?", function()
+      
