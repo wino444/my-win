@@ -1,0 +1,41 @@
+local mapIDs = {
+    4503309821, --ชื่อแมพ เมืองไทย
+    789012, -- ID แมพที่ต้องการตรวจสอบ
+    345678, -- ID แมพที่ต้องการตรวจสอบ
+    901234, -- ID แมพที่ต้องการตรวจสอบ
+    567890, -- ID แมพที่ต้องการตรวจสอบ
+    234567, -- ID แมพที่ต้องการตรวจสอบ
+    890123, -- ID แมพที่ต้องการตรวจสอบ
+    456789, -- ID แมพที่ต้องการตรวจสอบ
+    123890, -- ID แมพที่ต้องการตรวจสอบ
+    567123  -- ID แมพที่ต้องการตรวจสอบ
+}
+
+local currentMapID = game.PlaceId  -- ได้ ID ของแมพที่กำลังเล่นอยู่
+
+local scriptURLs = {
+    "https://raw.githubusercontent.com/wino444/1-/refs/heads/main/%E0%B8%AA%E0%B8%84%E0%B8%B4%E0%B8%9B%E0%B9%81%E0%B8%A1%E0%B8%9E%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2",
+    "https://example.com/script2.lua",
+    "https://example.com/script3.lua",
+    "https://example.com/script4.lua",
+    "https://example.com/script5.lua",
+    "https://example.com/script6.lua",
+    "https://example.com/script7.lua",
+    "https://example.com/script8.lua",
+    "https://example.com/script9.lua",
+    "https://example.com/script10.lua"
+}
+
+-- ฟังก์ชั่นตรวจสอบว่า ID ตรงกันหรือไม่
+local function checkMapAndRunScript()
+    for _, id in ipairs(mapIDs) do
+        if currentMapID == id then
+            local scriptURL = scriptURLs[_]
+            -- รันคำสั่ง loadstring
+            loadstring(game:HttpGet(scriptURL))()
+            break
+        end
+    end
+end
+
+checkMapAndRunScript()  -- เรียกใช้ฟังก์ชั่นตรวจสอบและรัน
