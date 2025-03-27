@@ -14,7 +14,7 @@ local mapIDs = {
 local currentMapID = game.PlaceId  -- ได้ ID ของแมพที่กำลังเล่นอยู่
 
 local scriptURLs = {
-    "https://raw.githubusercontent.com/wino444/1-/refs/heads/main/%E0%B8%AA%E0%B8%84%E0%B8%B4%E0%B8%9E%E0%B9%81%E0%B8%A1%E0%B8%9E%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2",
+    "https://raw.githubusercontent.com/wino444/1-/refs/heads/main/%E0%B8%AA%E0%B8%84%E0%B8%B4%E0%B8%9B%E0%B9%81%E0%B8%A1%E0%B8%9E%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B9%84%E0%B8%97%E0%B8%A2",
     "https://example.com/script2.lua",
     "https://example.com/script3.lua",
     "https://example.com/script4.lua",
